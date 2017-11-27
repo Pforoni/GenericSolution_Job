@@ -14,6 +14,7 @@
             membershipService.login($scope.user, loginCompleted)
         }
 
+        //Login Admim - foroni; homecinema
         function loginCompleted(result) {
             if (result.data.success) {
                 membershipService.saveCredentials($scope.user);
