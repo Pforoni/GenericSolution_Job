@@ -1,0 +1,13 @@
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\GenericServices.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\GenericServices.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\Generic.Data.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\Generic.Entities.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\EntityFramework.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\Generic.Data.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\Generic.Data.dll.config
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\Generic.Entities.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\Generic.Entities.dll.config
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\bin\Release\EntityFramework.xml
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\obj\Release\Generic.Services.csprojResolveAssemblyReference.cache
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\obj\Release\GenericServices.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\GenericServices\obj\Release\GenericServices.pdb

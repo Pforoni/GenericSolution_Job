@@ -1,0 +1,16 @@
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\Generic.Data.dll.config
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\Generic.Data.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\Generic.Data.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\EntityFramework.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\Generic.Entities.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\Generic.Entities.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\Generic.Entities.dll.config
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\EntityFramework.xml
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\obj\Release\Generic.Data.csprojResolveAssemblyReference.cache
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\obj\Release\Generic.Data.Migrations.initial_migration.resources
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\obj\Release\Generic.Data.Migrations.initial_migration1.resources
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\obj\Release\Generic.Data.csproj.GenerateResource.Cache
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\obj\Release\Generic.Data.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Data\obj\Release\Generic.Data.pdb

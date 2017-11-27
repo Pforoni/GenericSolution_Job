@@ -1,0 +1,39 @@
+﻿<div class="row">
+    <form class="form-signin" role="form" novalidate angular-validator name="userRegistrationForm" angular-validator-submit="register()">
+        <h3 class="form-signin-heading">Register <label class="label label-danger">Admin</label></h3>
+        <div class="form-group">
+            <label for="inputUsername" class="">Username</label>
+            <input type="text" name="inputUsername" class="form-control" ng-model="user.username"
+                   placeholder="Username" validate-on="blur" required required-message="'Username is required'">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" name="inputPassword" class="form-control" ng-model="user.password" placeholder="Password"
+                   validate-on="blur" required required-message="'Password is required'">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" name="inputEmail" class="form-control" ng-model="user.email" placeholder="Email address"
+                   validate-on="blur" required required-message="'Email is required'">
+        </div> 
+        <div class="form-group">
+            <label for="inputNasc">Data Nasc.</label>
+            <input type="date" name="inputNasc" class="form-control" ng-model="user.datenasc" placeholder="Data Nasc."
+                   validate-on="blur" required required-message="'Data Nasc. is required'">
+        </div> 
+        <div class="form-group">
+            <label for="inputCPF">CPF</label>
+            <input type="text" name="inputCPF" class="form-control" ng-model="user.cpf" placeholder="CPF"
+                   validate-on="blur" required required-message="'CPF is required'">
+        </div> 
+        <div class="form-group">
+            <label for="inputRG">RG</label>
+            <input type="text" name="inputRG" class="form-control" ng-model="user.rg" placeholder="RG" ng-maxlength="10">
+        </div>        
+        <div class="form-group">
+            <label for="inputNaturalidade" class="">Naturalidade</label>
+            <input type="text" name="inputNaturalidade" class="form-control" ng-model="user.naturalidade" placeholder="Naturalidade" ng-maxlength="30">
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    </form>
+</div>

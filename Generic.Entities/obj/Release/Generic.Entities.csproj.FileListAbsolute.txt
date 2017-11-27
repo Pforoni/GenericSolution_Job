@@ -1,0 +1,6 @@
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Entities\bin\Release\Generic.Entities.dll.config
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Entities\bin\Release\Generic.Entities.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Entities\bin\Release\Generic.Entities.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Entities\obj\Release\Generic.Entities.csprojResolveAssemblyReference.cache
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Entities\obj\Release\Generic.Entities.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolution\Generic.Entities\obj\Release\Generic.Entities.pdb

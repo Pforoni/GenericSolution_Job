@@ -1,0 +1,82 @@
+﻿<div class="row">
+    <form class="form-signin form-register" role="form" novalidate angular-validator name="userRegistrationForm" angular-validator-submit="register()">
+        <h3 class="form-signin-heading">Cadastro <label class="label label-danger">Profissionais</label></h3>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <label for="inputUsername" class="control-label">Username</label>
+                    <input type="text" name="inputUsername" class="form-control" ng-model="user.username"
+                           placeholder="Username" validate-on="blur" required required-message="'Username is required'">
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <label for="inputPassword" class="control-label">Password</label>
+                    <input type="password" name="inputPassword" class="form-control" ng-model="user.password" placeholder="Password"
+                           validate-on="blur" required required-message="'Password is required'">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <label for="inputEmail" class="control-label">Email</label>
+                    <input type="email" name="inputEmail" class="form-control" ng-model="user.email" placeholder="Email address"
+                           validate-on="blur" required required-message="'Email is required'">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <label for="inputNasc" class="control-label">Data Nasc.</label>
+                    <p class="input-group">
+                        <!--<input name="inputNasc" type="text" class="form-control" ng-model="user.datenasc" placeholder="Data Nasc." validate-on="blur" />-->
+                        <input type="text" class="form-control" name="dateOfBirth" datepicker-popup="{{format}}" ng-model="user.datenasc" is-open="datepicker.opened"
+                               datepicker-options="dateOptions" ng-required="true" datepicker-append-to-body="true" close-text="Close"
+                               validate-on="blur" required required-message="'Date of birth is required'" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" style="font-size: 21px;" ng-click="openDatePicker($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <label class="control-label">Genero</label>
+                    <select class="form-control" ng-model="user.GenreId" ng-options="option.ID as option.Name for option in generos" required></select>
+                    <input type="hidden" name="GenreId" ng-value="user.GenreId" />
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <label for="inputCPF" class="control-label">CPF</label>
+                    <input type="text" name="inputCPF" class="form-control" ng-model="user.cpf" placeholder="CPF"
+                           validate-on="blur" required required-message="'CPF is required'">
+                </div>
+                <!--</div>
+                <div class="form-group">-->
+                <div class="col-xs-12 col-md-6">
+                    <label for="inputRG" class="control-label">RG</label>
+                    <input type="text" name="inputRG" class="form-control" ng-model="user.rg" placeholder="RG" ng-maxlength="10">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <label for="inputNaturalidade" class="control-label">Naturalidade</label>
+                    <input type="text" name="inputNaturalidade" class="form-control" ng-model="user.naturalidade" placeholder="Naturalidade" ng-maxlength="30">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

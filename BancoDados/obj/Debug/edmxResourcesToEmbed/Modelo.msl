@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManagementAthletesModelStoreContainer" CdmEntityContainer="ManagementAthletesEntities">
+    <EntitySetMapping Name="Atleta">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Atleta">
+        <MappingFragment StoreEntitySet="Atleta">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Naturalidade" ColumnName="Naturalidade" />
+          <ScalarProperty Name="Nacionalidade" ColumnName="Nacionalidade" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contatos">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Contatos">
+        <MappingFragment StoreEntitySet="Contatos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FoneResidencial" ColumnName="FoneResidencial" />
+          <ScalarProperty Name="FoneComercial" ColumnName="FoneComercial" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="IsEmergencia" ColumnName="IsEmergencia" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdProfissional" ColumnName="IdProfissional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidade">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Especialidade">
+        <MappingFragment StoreEntitySet="Especialidade">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gravidade">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Gravidade">
+        <MappingFragment StoreEntitySet="Gravidade">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LadoLesao">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.LadoLesao">
+        <MappingFragment StoreEntitySet="LadoLesao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lesoes">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Lesoes">
+        <MappingFragment StoreEntitySet="Lesoes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataLesao" ColumnName="DataLesao" />
+          <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+          <ScalarProperty Name="IdLocalLesao" ColumnName="IdLocalLesao" />
+          <ScalarProperty Name="IdLadoLesao" ColumnName="IdLadoLesao" />
+          <ScalarProperty Name="IdTipoLesao" ColumnName="IdTipoLesao" />
+          <ScalarProperty Name="IdGravidade" ColumnName="IdGravidade" />
+          <ScalarProperty Name="IdOcorrencia" ColumnName="IdOcorrencia" />
+          <ScalarProperty Name="IdAtleta" ColumnName="IdAtleta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocalLesao">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.LocalLesao">
+        <MappingFragment StoreEntitySet="LocalLesao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ocorrencia">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Ocorrencia">
+        <MappingFragment StoreEntitySet="Ocorrencia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profissional">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Profissional">
+        <MappingFragment StoreEntitySet="Profissional">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Naturalidade" ColumnName="Naturalidade" />
+          <ScalarProperty Name="Nacionalidade" ColumnName="Nacionalidade" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profissional_Especialidade">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Profissional_Especialidade">
+        <MappingFragment StoreEntitySet="Profissional_Especialidade">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdProfissional" ColumnName="IdProfissional" />
+          <ScalarProperty Name="IdEspecialidade" ColumnName="IdEspecialidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoLesao">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.TipoLesao">
+        <MappingFragment StoreEntitySet="TipoLesao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposTratamento">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.TiposTratamento">
+        <MappingFragment StoreEntitySet="TiposTratamento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tratamento">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Tratamento">
+        <MappingFragment StoreEntitySet="Tratamento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMotivo" ColumnName="IdMotivo" />
+          <ScalarProperty Name="Observacoes" ColumnName="Observacoes" />
+          <ScalarProperty Name="TratamentoFinalizado" ColumnName="TratamentoFinalizado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tratamento_TipoTratamento">
+      <EntityTypeMapping TypeName="ManagementAthletesModel.Tratamento_TipoTratamento">
+        <MappingFragment StoreEntitySet="Tratamento_TipoTratamento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTratamento" ColumnName="IdTratamento" />
+          <ScalarProperty Name="IdTipoTratamento" ColumnName="IdTipoTratamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

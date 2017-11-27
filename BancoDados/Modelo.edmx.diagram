@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2e5fd1c289e148d6a03d1e07a8c87b2a" Name="Diagram1" ZoomLevel="124">
+        <EntityTypeShape EntityType="ManagementAthletesModel.Atleta" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Contatos" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Especialidade" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Gravidade" Width="1.5" PointX="3.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.LadoLesao" Width="1.5" PointX="3.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Lesoes" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.LocalLesao" Width="1.5" PointX="3.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Ocorrencia" Width="1.5" PointX="3.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Profissional" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Profissional_Especialidade" Width="2.25" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.TipoLesao" Width="1.5" PointX="3.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.TiposTratamento" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Tratamento" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementAthletesModel.Tratamento_TipoTratamento" Width="3.25" PointX="10.5" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Contatos_Atleta" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Lesoes_Atleta" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Contatos_Profissional" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Profissional_Especialidade_Especialidade" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Lesoes_Gravidade" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Lesoes_LadoLesao" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Lesoes_LocalLesao" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Lesoes_Ocorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Lesoes_TipoLesao" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Tratamento_Lesoes" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Profissional_Especialidade_Profissional" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Tratamento_TipoTratamento_TiposTratamento" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementAthletesModel.FK_Tratamento_TipoTratamento_Tratamento" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

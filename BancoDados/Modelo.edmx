@@ -1,0 +1,956 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ManagementAthletesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Atleta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="Naturalidade" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nacionalidade" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="RG" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CPF" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Genero" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contatos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FoneResidencial" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="FoneComercial" Type="nvarchar" MaxLength="15" />
+          <Property Name="Celular" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsEmergencia" Type="bit" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdUser" Type="int" />
+          <Property Name="IdProfissional" Type="int" />
+        </EntityType>
+        <EntityType Name="Especialidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gravidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LadoLesao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lesoes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DataLesao" Type="date" Nullable="false" />
+          <Property Name="Diagnostico" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="IdLocalLesao" Type="int" Nullable="false" />
+          <Property Name="IdLadoLesao" Type="int" Nullable="false" />
+          <Property Name="IdTipoLesao" Type="int" Nullable="false" />
+          <Property Name="IdGravidade" Type="int" Nullable="false" />
+          <Property Name="IdOcorrencia" Type="int" Nullable="false" />
+          <Property Name="IdAtleta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LocalLesao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ocorrencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profissional">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="Naturalidade" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nacionalidade" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="RG" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CPF" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Genero" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profissional_Especialidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdProfissional" Type="int" Nullable="false" />
+          <Property Name="IdEspecialidade" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TipoLesao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TiposTratamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tratamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdMotivo" Type="int" Nullable="false" />
+          <Property Name="Observacoes" Type="nvarchar" MaxLength="300" />
+          <Property Name="TratamentoFinalizado" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tratamento_TipoTratamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdTratamento" Type="int" Nullable="false" />
+          <Property Name="IdTipoTratamento" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Contatos_Atleta">
+          <End Role="Atleta" Type="Self.Atleta" Multiplicity="0..1" />
+          <End Role="Contatos" Type="Self.Contatos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atleta">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contatos">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contatos_Profissional">
+          <End Role="Profissional" Type="Self.Profissional" Multiplicity="0..1" />
+          <End Role="Contatos" Type="Self.Contatos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profissional">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contatos">
+              <PropertyRef Name="IdProfissional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_Atleta">
+          <End Role="Atleta" Type="Self.Atleta" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atleta">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdAtleta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_Gravidade">
+          <End Role="Gravidade" Type="Self.Gravidade" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gravidade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdGravidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_LadoLesao">
+          <End Role="LadoLesao" Type="Self.LadoLesao" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LadoLesao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdLadoLesao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_LocalLesao">
+          <End Role="LocalLesao" Type="Self.LocalLesao" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LocalLesao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdLocalLesao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_Ocorrencia">
+          <End Role="Ocorrencia" Type="Self.Ocorrencia" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ocorrencia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_TipoLesao">
+          <End Role="TipoLesao" Type="Self.TipoLesao" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoLesao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdTipoLesao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profissional_Especialidade_Especialidade">
+          <End Role="Especialidade" Type="Self.Especialidade" Multiplicity="1" />
+          <End Role="Profissional_Especialidade" Type="Self.Profissional_Especialidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Profissional_Especialidade">
+              <PropertyRef Name="IdEspecialidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profissional_Especialidade_Profissional">
+          <End Role="Profissional" Type="Self.Profissional" Multiplicity="1" />
+          <End Role="Profissional_Especialidade" Type="Self.Profissional_Especialidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profissional">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Profissional_Especialidade">
+              <PropertyRef Name="IdProfissional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tratamento_Lesoes">
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="1" />
+          <End Role="Tratamento" Type="Self.Tratamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lesoes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tratamento">
+              <PropertyRef Name="IdMotivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tratamento_TipoTratamento_TiposTratamento">
+          <End Role="TiposTratamento" Type="Self.TiposTratamento" Multiplicity="1" />
+          <End Role="Tratamento_TipoTratamento" Type="Self.Tratamento_TipoTratamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposTratamento">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tratamento_TipoTratamento">
+              <PropertyRef Name="IdTratamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tratamento_TipoTratamento_Tratamento">
+          <End Role="Tratamento" Type="Self.Tratamento" Multiplicity="1" />
+          <End Role="Tratamento_TipoTratamento" Type="Self.Tratamento_TipoTratamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tratamento">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tratamento_TipoTratamento">
+              <PropertyRef Name="IdTipoTratamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ManagementAthletesModelStoreContainer">
+          <EntitySet Name="Atleta" EntityType="Self.Atleta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contatos" EntityType="Self.Contatos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Especialidade" EntityType="Self.Especialidade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gravidade" EntityType="Self.Gravidade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LadoLesao" EntityType="Self.LadoLesao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lesoes" EntityType="Self.Lesoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LocalLesao" EntityType="Self.LocalLesao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ocorrencia" EntityType="Self.Ocorrencia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profissional" EntityType="Self.Profissional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profissional_Especialidade" EntityType="Self.Profissional_Especialidade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoLesao" EntityType="Self.TipoLesao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TiposTratamento" EntityType="Self.TiposTratamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tratamento" EntityType="Self.Tratamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tratamento_TipoTratamento" EntityType="Self.Tratamento_TipoTratamento" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Contatos_Atleta" Association="Self.FK_Contatos_Atleta">
+            <End Role="Atleta" EntitySet="Atleta" />
+            <End Role="Contatos" EntitySet="Contatos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contatos_Profissional" Association="Self.FK_Contatos_Profissional">
+            <End Role="Profissional" EntitySet="Profissional" />
+            <End Role="Contatos" EntitySet="Contatos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_Atleta" Association="Self.FK_Lesoes_Atleta">
+            <End Role="Atleta" EntitySet="Atleta" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_Gravidade" Association="Self.FK_Lesoes_Gravidade">
+            <End Role="Gravidade" EntitySet="Gravidade" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_LadoLesao" Association="Self.FK_Lesoes_LadoLesao">
+            <End Role="LadoLesao" EntitySet="LadoLesao" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_LocalLesao" Association="Self.FK_Lesoes_LocalLesao">
+            <End Role="LocalLesao" EntitySet="LocalLesao" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_Ocorrencia" Association="Self.FK_Lesoes_Ocorrencia">
+            <End Role="Ocorrencia" EntitySet="Ocorrencia" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_TipoLesao" Association="Self.FK_Lesoes_TipoLesao">
+            <End Role="TipoLesao" EntitySet="TipoLesao" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profissional_Especialidade_Especialidade" Association="Self.FK_Profissional_Especialidade_Especialidade">
+            <End Role="Especialidade" EntitySet="Especialidade" />
+            <End Role="Profissional_Especialidade" EntitySet="Profissional_Especialidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profissional_Especialidade_Profissional" Association="Self.FK_Profissional_Especialidade_Profissional">
+            <End Role="Profissional" EntitySet="Profissional" />
+            <End Role="Profissional_Especialidade" EntitySet="Profissional_Especialidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tratamento_Lesoes" Association="Self.FK_Tratamento_Lesoes">
+            <End Role="Lesoes" EntitySet="Lesoes" />
+            <End Role="Tratamento" EntitySet="Tratamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tratamento_TipoTratamento_TiposTratamento" Association="Self.FK_Tratamento_TipoTratamento_TiposTratamento">
+            <End Role="TiposTratamento" EntitySet="TiposTratamento" />
+            <End Role="Tratamento_TipoTratamento" EntitySet="Tratamento_TipoTratamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tratamento_TipoTratamento_Tratamento" Association="Self.FK_Tratamento_TipoTratamento_Tratamento">
+            <End Role="Tratamento" EntitySet="Tratamento" />
+            <End Role="Tratamento_TipoTratamento" EntitySet="Tratamento_TipoTratamento" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ManagementAthletesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Atleta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Naturalidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nacionalidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Contatos" Relationship="Self.FK_Contatos_Atleta" FromRole="Atleta" ToRole="Contatos" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Lesoes_Atleta" FromRole="Atleta" ToRole="Lesoes" />
+        </EntityType>
+        <EntityType Name="Contatos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FoneResidencial" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FoneComercial" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Celular" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsEmergencia" Type="Boolean" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IdUser" Type="Int32" />
+          <Property Name="IdProfissional" Type="Int32" />
+          <NavigationProperty Name="Atleta" Relationship="Self.FK_Contatos_Atleta" FromRole="Contatos" ToRole="Atleta" />
+          <NavigationProperty Name="Profissional" Relationship="Self.FK_Contatos_Profissional" FromRole="Contatos" ToRole="Profissional" />
+        </EntityType>
+        <EntityType Name="Especialidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Profissional_Especialidade" Relationship="Self.FK_Profissional_Especialidade_Especialidade" FromRole="Especialidade" ToRole="Profissional_Especialidade" />
+        </EntityType>
+        <EntityType Name="Gravidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Lesoes_Gravidade" FromRole="Gravidade" ToRole="Lesoes" />
+        </EntityType>
+        <EntityType Name="LadoLesao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Lesoes_LadoLesao" FromRole="LadoLesao" ToRole="Lesoes" />
+        </EntityType>
+        <EntityType Name="Lesoes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DataLesao" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Diagnostico" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdLocalLesao" Type="Int32" Nullable="false" />
+          <Property Name="IdLadoLesao" Type="Int32" Nullable="false" />
+          <Property Name="IdTipoLesao" Type="Int32" Nullable="false" />
+          <Property Name="IdGravidade" Type="Int32" Nullable="false" />
+          <Property Name="IdOcorrencia" Type="Int32" Nullable="false" />
+          <Property Name="IdAtleta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Atleta" Relationship="Self.FK_Lesoes_Atleta" FromRole="Lesoes" ToRole="Atleta" />
+          <NavigationProperty Name="Gravidade" Relationship="Self.FK_Lesoes_Gravidade" FromRole="Lesoes" ToRole="Gravidade" />
+          <NavigationProperty Name="LadoLesao" Relationship="Self.FK_Lesoes_LadoLesao" FromRole="Lesoes" ToRole="LadoLesao" />
+          <NavigationProperty Name="LocalLesao" Relationship="Self.FK_Lesoes_LocalLesao" FromRole="Lesoes" ToRole="LocalLesao" />
+          <NavigationProperty Name="Ocorrencia" Relationship="Self.FK_Lesoes_Ocorrencia" FromRole="Lesoes" ToRole="Ocorrencia" />
+          <NavigationProperty Name="TipoLesao" Relationship="Self.FK_Lesoes_TipoLesao" FromRole="Lesoes" ToRole="TipoLesao" />
+          <NavigationProperty Name="Tratamento" Relationship="Self.FK_Tratamento_Lesoes" FromRole="Lesoes" ToRole="Tratamento" />
+        </EntityType>
+        <EntityType Name="LocalLesao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Lesoes_LocalLesao" FromRole="LocalLesao" ToRole="Lesoes" />
+        </EntityType>
+        <EntityType Name="Ocorrencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Lesoes_Ocorrencia" FromRole="Ocorrencia" ToRole="Lesoes" />
+        </EntityType>
+        <EntityType Name="Profissional">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Naturalidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nacionalidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Contatos" Relationship="Self.FK_Contatos_Profissional" FromRole="Profissional" ToRole="Contatos" />
+          <NavigationProperty Name="Profissional_Especialidade" Relationship="Self.FK_Profissional_Especialidade_Profissional" FromRole="Profissional" ToRole="Profissional_Especialidade" />
+        </EntityType>
+        <EntityType Name="Profissional_Especialidade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdProfissional" Type="Int32" Nullable="false" />
+          <Property Name="IdEspecialidade" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Especialidade" Relationship="Self.FK_Profissional_Especialidade_Especialidade" FromRole="Profissional_Especialidade" ToRole="Especialidade" />
+          <NavigationProperty Name="Profissional" Relationship="Self.FK_Profissional_Especialidade_Profissional" FromRole="Profissional_Especialidade" ToRole="Profissional" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TipoLesao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Lesoes_TipoLesao" FromRole="TipoLesao" ToRole="Lesoes" />
+        </EntityType>
+        <EntityType Name="TiposTratamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tratamento_TipoTratamento" Relationship="Self.FK_Tratamento_TipoTratamento_TiposTratamento" FromRole="TiposTratamento" ToRole="Tratamento_TipoTratamento" />
+        </EntityType>
+        <EntityType Name="Tratamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdMotivo" Type="Int32" Nullable="false" />
+          <Property Name="Observacoes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="TratamentoFinalizado" Type="Boolean" />
+          <NavigationProperty Name="Lesoes" Relationship="Self.FK_Tratamento_Lesoes" FromRole="Tratamento" ToRole="Lesoes" />
+          <NavigationProperty Name="Tratamento_TipoTratamento" Relationship="Self.FK_Tratamento_TipoTratamento_Tratamento" FromRole="Tratamento" ToRole="Tratamento_TipoTratamento" />
+        </EntityType>
+        <EntityType Name="Tratamento_TipoTratamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdTratamento" Type="Int32" Nullable="false" />
+          <Property Name="IdTipoTratamento" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TiposTratamento" Relationship="Self.FK_Tratamento_TipoTratamento_TiposTratamento" FromRole="Tratamento_TipoTratamento" ToRole="TiposTratamento" />
+          <NavigationProperty Name="Tratamento" Relationship="Self.FK_Tratamento_TipoTratamento_Tratamento" FromRole="Tratamento_TipoTratamento" ToRole="Tratamento" />
+        </EntityType>
+        <Association Name="FK_Contatos_Atleta">
+          <End Role="Atleta" Type="Self.Atleta" Multiplicity="0..1" />
+          <End Role="Contatos" Type="Self.Contatos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atleta">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contatos">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_Atleta">
+          <End Role="Atleta" Type="Self.Atleta" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atleta">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdAtleta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contatos_Profissional">
+          <End Role="Profissional" Type="Self.Profissional" Multiplicity="0..1" />
+          <End Role="Contatos" Type="Self.Contatos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profissional">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Contatos">
+              <PropertyRef Name="IdProfissional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profissional_Especialidade_Especialidade">
+          <End Role="Especialidade" Type="Self.Especialidade" Multiplicity="1" />
+          <End Role="Profissional_Especialidade" Type="Self.Profissional_Especialidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Profissional_Especialidade">
+              <PropertyRef Name="IdEspecialidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_Gravidade">
+          <End Role="Gravidade" Type="Self.Gravidade" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gravidade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdGravidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_LadoLesao">
+          <End Role="LadoLesao" Type="Self.LadoLesao" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LadoLesao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdLadoLesao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_LocalLesao">
+          <End Role="LocalLesao" Type="Self.LocalLesao" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LocalLesao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdLocalLesao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_Ocorrencia">
+          <End Role="Ocorrencia" Type="Self.Ocorrencia" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ocorrencia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdOcorrencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lesoes_TipoLesao">
+          <End Role="TipoLesao" Type="Self.TipoLesao" Multiplicity="1" />
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoLesao">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lesoes">
+              <PropertyRef Name="IdTipoLesao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tratamento_Lesoes">
+          <End Role="Lesoes" Type="Self.Lesoes" Multiplicity="1" />
+          <End Role="Tratamento" Type="Self.Tratamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lesoes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tratamento">
+              <PropertyRef Name="IdMotivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profissional_Especialidade_Profissional">
+          <End Role="Profissional" Type="Self.Profissional" Multiplicity="1" />
+          <End Role="Profissional_Especialidade" Type="Self.Profissional_Especialidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profissional">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Profissional_Especialidade">
+              <PropertyRef Name="IdProfissional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tratamento_TipoTratamento_TiposTratamento">
+          <End Role="TiposTratamento" Type="Self.TiposTratamento" Multiplicity="1" />
+          <End Role="Tratamento_TipoTratamento" Type="Self.Tratamento_TipoTratamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposTratamento">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tratamento_TipoTratamento">
+              <PropertyRef Name="IdTratamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tratamento_TipoTratamento_Tratamento">
+          <End Role="Tratamento" Type="Self.Tratamento" Multiplicity="1" />
+          <End Role="Tratamento_TipoTratamento" Type="Self.Tratamento_TipoTratamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tratamento">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tratamento_TipoTratamento">
+              <PropertyRef Name="IdTipoTratamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ManagementAthletesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Atleta" EntityType="Self.Atleta" />
+          <EntitySet Name="Contatos" EntityType="Self.Contatos" />
+          <EntitySet Name="Especialidade" EntityType="Self.Especialidade" />
+          <EntitySet Name="Gravidade" EntityType="Self.Gravidade" />
+          <EntitySet Name="LadoLesao" EntityType="Self.LadoLesao" />
+          <EntitySet Name="Lesoes" EntityType="Self.Lesoes" />
+          <EntitySet Name="LocalLesao" EntityType="Self.LocalLesao" />
+          <EntitySet Name="Ocorrencia" EntityType="Self.Ocorrencia" />
+          <EntitySet Name="Profissional" EntityType="Self.Profissional" />
+          <EntitySet Name="Profissional_Especialidade" EntityType="Self.Profissional_Especialidade" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TipoLesao" EntityType="Self.TipoLesao" />
+          <EntitySet Name="TiposTratamento" EntityType="Self.TiposTratamento" />
+          <EntitySet Name="Tratamento" EntityType="Self.Tratamento" />
+          <EntitySet Name="Tratamento_TipoTratamento" EntityType="Self.Tratamento_TipoTratamento" />
+          <AssociationSet Name="FK_Contatos_Atleta" Association="Self.FK_Contatos_Atleta">
+            <End Role="Atleta" EntitySet="Atleta" />
+            <End Role="Contatos" EntitySet="Contatos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_Atleta" Association="Self.FK_Lesoes_Atleta">
+            <End Role="Atleta" EntitySet="Atleta" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contatos_Profissional" Association="Self.FK_Contatos_Profissional">
+            <End Role="Profissional" EntitySet="Profissional" />
+            <End Role="Contatos" EntitySet="Contatos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profissional_Especialidade_Especialidade" Association="Self.FK_Profissional_Especialidade_Especialidade">
+            <End Role="Especialidade" EntitySet="Especialidade" />
+            <End Role="Profissional_Especialidade" EntitySet="Profissional_Especialidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_Gravidade" Association="Self.FK_Lesoes_Gravidade">
+            <End Role="Gravidade" EntitySet="Gravidade" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_LadoLesao" Association="Self.FK_Lesoes_LadoLesao">
+            <End Role="LadoLesao" EntitySet="LadoLesao" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_LocalLesao" Association="Self.FK_Lesoes_LocalLesao">
+            <End Role="LocalLesao" EntitySet="LocalLesao" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_Ocorrencia" Association="Self.FK_Lesoes_Ocorrencia">
+            <End Role="Ocorrencia" EntitySet="Ocorrencia" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lesoes_TipoLesao" Association="Self.FK_Lesoes_TipoLesao">
+            <End Role="TipoLesao" EntitySet="TipoLesao" />
+            <End Role="Lesoes" EntitySet="Lesoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tratamento_Lesoes" Association="Self.FK_Tratamento_Lesoes">
+            <End Role="Lesoes" EntitySet="Lesoes" />
+            <End Role="Tratamento" EntitySet="Tratamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profissional_Especialidade_Profissional" Association="Self.FK_Profissional_Especialidade_Profissional">
+            <End Role="Profissional" EntitySet="Profissional" />
+            <End Role="Profissional_Especialidade" EntitySet="Profissional_Especialidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tratamento_TipoTratamento_TiposTratamento" Association="Self.FK_Tratamento_TipoTratamento_TiposTratamento">
+            <End Role="TiposTratamento" EntitySet="TiposTratamento" />
+            <End Role="Tratamento_TipoTratamento" EntitySet="Tratamento_TipoTratamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tratamento_TipoTratamento_Tratamento" Association="Self.FK_Tratamento_TipoTratamento_Tratamento">
+            <End Role="Tratamento" EntitySet="Tratamento" />
+            <End Role="Tratamento_TipoTratamento" EntitySet="Tratamento_TipoTratamento" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ManagementAthletesModelStoreContainer" CdmEntityContainer="ManagementAthletesEntities">
+          <EntitySetMapping Name="Atleta">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Atleta">
+              <MappingFragment StoreEntitySet="Atleta">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Naturalidade" ColumnName="Naturalidade" />
+                <ScalarProperty Name="Nacionalidade" ColumnName="Nacionalidade" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contatos">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Contatos">
+              <MappingFragment StoreEntitySet="Contatos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FoneResidencial" ColumnName="FoneResidencial" />
+                <ScalarProperty Name="FoneComercial" ColumnName="FoneComercial" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="IsEmergencia" ColumnName="IsEmergencia" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="IdProfissional" ColumnName="IdProfissional" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Especialidade">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Especialidade">
+              <MappingFragment StoreEntitySet="Especialidade">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gravidade">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Gravidade">
+              <MappingFragment StoreEntitySet="Gravidade">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LadoLesao">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.LadoLesao">
+              <MappingFragment StoreEntitySet="LadoLesao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lesoes">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Lesoes">
+              <MappingFragment StoreEntitySet="Lesoes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DataLesao" ColumnName="DataLesao" />
+                <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+                <ScalarProperty Name="IdLocalLesao" ColumnName="IdLocalLesao" />
+                <ScalarProperty Name="IdLadoLesao" ColumnName="IdLadoLesao" />
+                <ScalarProperty Name="IdTipoLesao" ColumnName="IdTipoLesao" />
+                <ScalarProperty Name="IdGravidade" ColumnName="IdGravidade" />
+                <ScalarProperty Name="IdOcorrencia" ColumnName="IdOcorrencia" />
+                <ScalarProperty Name="IdAtleta" ColumnName="IdAtleta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LocalLesao">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.LocalLesao">
+              <MappingFragment StoreEntitySet="LocalLesao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ocorrencia">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Ocorrencia">
+              <MappingFragment StoreEntitySet="Ocorrencia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profissional">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Profissional">
+              <MappingFragment StoreEntitySet="Profissional">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Naturalidade" ColumnName="Naturalidade" />
+                <ScalarProperty Name="Nacionalidade" ColumnName="Nacionalidade" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profissional_Especialidade">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Profissional_Especialidade">
+              <MappingFragment StoreEntitySet="Profissional_Especialidade">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdProfissional" ColumnName="IdProfissional" />
+                <ScalarProperty Name="IdEspecialidade" ColumnName="IdEspecialidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoLesao">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.TipoLesao">
+              <MappingFragment StoreEntitySet="TipoLesao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TiposTratamento">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.TiposTratamento">
+              <MappingFragment StoreEntitySet="TiposTratamento">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tratamento">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Tratamento">
+              <MappingFragment StoreEntitySet="Tratamento">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdMotivo" ColumnName="IdMotivo" />
+                <ScalarProperty Name="Observacoes" ColumnName="Observacoes" />
+                <ScalarProperty Name="TratamentoFinalizado" ColumnName="TratamentoFinalizado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tratamento_TipoTratamento">
+            <EntityTypeMapping TypeName="ManagementAthletesModel.Tratamento_TipoTratamento">
+              <MappingFragment StoreEntitySet="Tratamento_TipoTratamento">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdTratamento" ColumnName="IdTratamento" />
+                <ScalarProperty Name="IdTipoTratamento" ColumnName="IdTipoTratamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

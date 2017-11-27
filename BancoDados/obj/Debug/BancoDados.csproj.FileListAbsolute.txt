@@ -1,0 +1,11 @@
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\BancoDados.dll.config
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\BancoDados.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\BancoDados.pdb
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\EntityFramework.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\EntityFramework.xml
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\obj\Debug\BancoDados.csprojResolveAssemblyReference.cache
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\obj\Debug\BancoDados.csproj.CoreCompileInputs.cache
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\obj\Debug\BancoDados.dll
+C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\BancoDados\obj\Debug\BancoDados.pdb
