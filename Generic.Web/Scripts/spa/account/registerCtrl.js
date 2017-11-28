@@ -16,6 +16,15 @@
             membershipService.register($scope.user, registerCompleted)
         }
 
+        $scope.openDatePicker = openDatePicker;
+        $scope.dateOptions = {
+            formatYear: 'yy',
+            startingDay: 1
+        };
+        $scope.datepicker = {};
+        $scope.formats = ['dd/MM/yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+
         function registerCompleted(result) {
             if (result.data.success) {
                 membershipService.saveCredentials($scope.user);
@@ -169,6 +178,12 @@
             getUsers();
         }
         loadGeneros();
+        function openDatePicker($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            $scope.datepicker.opened = true;
+        };
     }
 
 })(angular.module('common.core'));
