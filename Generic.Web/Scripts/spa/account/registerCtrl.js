@@ -18,7 +18,7 @@
 
         $scope.openDatePicker = openDatePicker;
         $scope.dateOptions = {
-            formatYear: 'yy',
+            //formatYear: 'yy',
             startingDay: 1
         };
         $scope.datepicker = {};

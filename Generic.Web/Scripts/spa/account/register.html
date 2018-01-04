@@ -43,8 +43,8 @@
                 
                 <div class="col-xs-12 col-md-6">
                     <label class="control-label">Genero</label>
-                    <select class="form-control" ng-model="user.GenreId" ng-options="option.ID as option.Name for option in generos" required></select>
-                    <input type="hidden" name="GenreId" ng-value="user.GenreId" />
+                    <select class="form-control" ng-model="user.Genero_Id" ng-options="option.ID as option.Name for option in generos" required></select>
+                    <input type="hidden" name="Genero_Id" ng-value="user.Genero_Id" />
 
                 </div>
             </div>
@@ -67,8 +67,8 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <label for="inputNaturalidade" class="control-label">Naturalidade</label>
-                    <input type="text" name="inputNaturalidade" class="form-control" ng-model="user.naturalidade" placeholder="Naturalidade" ng-maxlength="30">
+                    <label for="naturalidade" class="control-label">Naturalidade</label>
+                    <input type="text" name="naturalidade" class="form-control" ng-model="user.naturalidade" placeholder="Naturalidade" ng-maxlength="30">
                 </div>
             </div>
         </div>

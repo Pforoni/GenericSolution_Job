@@ -60,6 +60,7 @@ namespace Generic.Web.Controllers
             });
         }
 
+        [AllowAnonymous]
         [Route("loadUsers")]
         [HttpGet]
         public HttpResponseMessage GetUsers(HttpRequestMessage request)

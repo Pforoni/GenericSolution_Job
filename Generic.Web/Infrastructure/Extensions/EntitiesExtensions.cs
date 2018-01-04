@@ -15,7 +15,7 @@ namespace Generic.Web.Infrastructure.Extensions
             user.CPF = userVm.CPF;
             user.RG = userVm.RG;
             user.Naturalidade = userVm.Naturalidade;
-            
+            user.Genero_Id = userVm.Genero_Id;
         }
 
     }

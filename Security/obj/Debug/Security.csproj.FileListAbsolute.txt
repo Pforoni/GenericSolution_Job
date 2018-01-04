@@ -66,4 +66,3 @@ C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeran
 C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Security\obj\Debug\Security.csproj.CoreCompileInputs.cache
 C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Security\obj\Debug\Security.dll
 C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Security\obj\Debug\Security.pdb
-C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache

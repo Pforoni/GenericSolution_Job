@@ -18,4 +18,3 @@ C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeran
 C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Generic.Entities\obj\Debug\Generic.Entities.csproj.CoreCompileInputs.cache
 C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Generic.Entities\obj\Debug\Generic.Entities.dll
 C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Generic.Entities\obj\Debug\Generic.Entities.pdb
-C:\Users\paulo.foroni\Documents\Visual Studio 2017\Projects\GenericSolutionHeranca\Generic.Entities\obj\Debug\Generic.Entities.csprojResolveAssemblyReference.cache

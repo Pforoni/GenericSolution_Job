@@ -16,6 +16,7 @@ namespace Generic.Web.Models
         public string CPF { get; set; }
         public string RG { get; set; }
         public string Naturalidade { get; set; }
+        public Guid Genero_Id { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

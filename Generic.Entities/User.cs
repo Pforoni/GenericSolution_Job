@@ -26,6 +26,8 @@ namespace Generic.Entities
         public string Naturalidade { get; set; }
         public ICollection<UserRole> UserRoles { get; set; }
         public ICollection<Contatos> ContatosUser { get; set; }
+        public Guid Genero_Id { get; set; }
+        //public Genero Genero { get; set; }
 
     }
 }
