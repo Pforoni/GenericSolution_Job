@@ -187,6 +187,7 @@
     <Content Include="Scripts\spa\account\login.html" />
     <Content Include="Scripts\spa\account\loginCtrl.js" />
     <Content Include="Scripts\spa\account\register.html" />
+    <Content Include="Scripts\spa\account\registerCtrl - Copy.js" />
     <Content Include="Scripts\spa\account\registerCtrl.js" />
     <Content Include="Scripts\spa\account\users.html" />
     <Content Include="Scripts\spa\app.js" />
@@ -228,6 +229,7 @@
     <Content Include="Scripts\vendors\raphael.js" />
     <Content Include="Scripts\vendors\respond.src.js" />
     <Content Include="Scripts\vendors\toastr.js" />
+    <Content Include="Scripts\vendors\ui-bootstrap-tpls-0.13.1.js" />
     <Content Include="Scripts\vendors\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\vendors\underscore.js" />
     <Content Include="Web.config" />

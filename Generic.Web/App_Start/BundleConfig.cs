@@ -30,7 +30,7 @@ namespace Generic.Web.App_Start
                 "~/Scripts/vendors/bootstrap-table-pt-BR.js",
                 "~/Scripts/vendors/bootstrap-table-angular.js",
                 "~/Scripts/vendors/angucomplete-alt.min.js",
-                "~/Scripts/vendors/ui-bootstrap-tpls.js",
+                "~/Scripts/vendors/ui-bootstrap-tpls-0.13.1.js",
                 "~/Scripts/vendors/underscore.js",
                 "~/Scripts/vendors/raphael.js",
                 "~/Scripts/vendors/morris.js",
